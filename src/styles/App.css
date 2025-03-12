@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 * {
   outline: none;
   box-sizing: border-box;
 }
 
+/* Trong src/styles/App.css */
 :root {
   --theme-bg-color: rgba(16 18 27 / 40%);
   --border-color: rgba(113 119 144 / 25%);
@@ -22,7 +24,7 @@
   --scrollbar-bg: rgb(1 2 3 / 40%);
 }
 
-.light-mode {
+.root-wrapper.light-mode {
   --theme-bg-color: rgb(255 255 255 / 31%);
   --theme-color: #3c3a3a;
   --inactive-color: #333333;
@@ -48,13 +50,14 @@ body {
   background-image: url(https://wallpapershome.com/images/wallpapers/macos-big-sur-1280x720-dark-wwdc-2020-22655.jpg);
   background-size: cover;
   background-position: center;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding: 2em;
-  width: 100%;
-  height: 100vh;
 }
 @media screen and (max-width: 480px) {
   body {
@@ -64,16 +67,34 @@ body {
 
 .video-bg {
   position: fixed;
-  right: 0;
+  left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }
 .video-bg video {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
+}
+
+/* Áp dụng hiệu ứng light mode cho video background */
+.root-wrapper.light-mode .video-bg:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.72) 0%,
+    rgba(255, 255, 255, 0.45) 100%
+  );
+  -webkit-backdrop-filter: saturate(3);
+  backdrop-filter: saturate(3);
+  z-index: 0;
 }
 
 img {
@@ -99,38 +120,22 @@ img {
   transition: 0.5s;
 }
 
-.light-mode .dark-light svg {
+.root-wrapper.light-mode .dark-light svg {
   fill: transparent;
   stroke: var(--theme-color);
 }
-.light-mode .profile-img {
+
+.root-wrapper.light-mode .profile-img {
   border: 2px solid var(--theme-bg-color);
 }
-.light-mode .content-section ul {
+.root-wrapper.light-mode .content-section ul {
   background-color: var(--theme-bg-color);
 }
-.light-mode .pop-up__title {
+.root-wrapper.light-mode .pop-up__title {
   border-color: var(--theme-color);
 }
-.light-mode .dropdown.is-active ul {
+.root-wrapper.light-mode .dropdown.is-active ul {
   background-color: rgba(255, 255, 255, 0.94);
-}
-
-body.light-mode:before,
-body.light-mode .video-bg:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.72) 0%,
-    rgba(255, 255, 255, 0.45) 100%
-  );
-  -webkit-backdrop-filter: saturate(3);
-  backdrop-filter: saturate(3);
 }
 
 .app {
@@ -148,6 +153,7 @@ body.light-mode .video-bg:before {
   -webkit-backdrop-filter: blur(20px);
   font-size: 15px;
   font-weight: 500;
+  z-index: 1;
 }
 
 .header {
@@ -896,4 +902,4 @@ body.light-mode .video-bg:before {
 ::-webkit-scrollbar-thumb {
   background: var(--scrollbar-bg);
   border-radius: 10px;
-} /*# sourceMappingURL=index.css.map */
+}

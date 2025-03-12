@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './styles/App.css';
+import VideoBackground from './components/VideoBackground';
+import DarkLightToggle from './components/DarkLightToggle';
+import AppHeader from './components/AppHeader';
+import LeftSide from './components/LeftSide';
+import MainContainer from './components/MainContainer';
 
 function App() {
+  const [isLightMode, setIsLightMode] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+
+  const toggleLightMode = () => setIsLightMode(!isLightMode);
+  const switchSection = (section) => setActiveSection(section);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`root-wrapper ${isLightMode ? 'light-mode' : ''}`}>
+      <VideoBackground />
+      <div className="app">
+        <DarkLightToggle toggleLightMode={toggleLightMode} />
+        <AppHeader />
+        <div className="wrapper">
+          <LeftSide switchSection={switchSection} />
+          <MainContainer activeSection={activeSection} />
+        </div>
+        <div className="overlay-app"></div>
+      </div>
     </div>
   );
 }
