@@ -1,7 +1,7 @@
 {
   "name": "app-dashboard",
   "version": "0.1.0",
-  "homepage": "https://macdogiahuy.github.io/Deploy-testing-using-gh-page",
+  "homepage": "https://macdogiahuy.github.io/MAC_GUI_REACT",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
