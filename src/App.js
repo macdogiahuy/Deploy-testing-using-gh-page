@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import './styles/App.css';
-import VideoBackground from './components/VideoBackground';
-import DarkLightToggle from './components/DarkLightToggle';
+import { useState } from 'react';
 import AppHeader from './components/AppHeader';
+import DarkLightToggle from './components/DarkLightToggle';
 import LeftSide from './components/LeftSide';
 import MainContainer from './components/MainContainer';
+import VideoBackground from './components/VideoBackground';
+import './styles/App.css';
 
 function App() {
   const [isLightMode, setIsLightMode] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState('profile');
 
   const toggleLightMode = () => setIsLightMode(!isLightMode);
   const switchSection = (section) => setActiveSection(section);

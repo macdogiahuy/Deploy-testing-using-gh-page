@@ -103,13 +103,14 @@ img {
 
 .dark-light {
   position: fixed;
-  bottom: 50px;
-  right: 30px;
+  /* pin to the bottom-right corner */
+  bottom: 20px;
+  right: 20px;
   background-color: var(--dropdown-bg);
   box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.2);
   padding: 8px;
   border-radius: 50%;
-  z-index: 3;
+  z-index: 1000; /* ensure it's above most UI elements */
   cursor: pointer;
 }
 .dark-light svg {
@@ -123,6 +124,15 @@ img {
 .root-wrapper.light-mode .dark-light svg {
   fill: transparent;
   stroke: var(--theme-color);
+}
+
+@media screen and (max-width: 480px) {
+  .dark-light {
+    bottom: 16px;
+    right: 16px;
+    padding: 6px;
+    transform: scale(0.95);
+  }
 }
 
 .root-wrapper.light-mode .profile-img {
