@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Deploy-testing-using-gh-page/static/css/main.67836eff.css",
-    "main.js": "/Deploy-testing-using-gh-page/static/js/main.6e97b79e.js",
-    "static/js/453.add32add.chunk.js": "/Deploy-testing-using-gh-page/static/js/453.add32add.chunk.js",
-    "static/media/281553601___n.jpg": "/Deploy-testing-using-gh-page/static/media/281553601_1200625580678473_5285464895107595026_n.bf76136b9272d7207faf.jpg",
-    "static/media/360_F_612316958_ueScrCOjrNBIuDMpiVt6UI3F8dkk6IWI.jpg": "/Deploy-testing-using-gh-page/static/media/360_F_612316958_ueScrCOjrNBIuDMpiVt6UI3F8dkk6IWI.1a73e363721f3c45f055.jpg",
-    "index.html": "/Deploy-testing-using-gh-page/index.html",
-    "main.67836eff.css.map": "/Deploy-testing-using-gh-page/static/css/main.67836eff.css.map",
-    "main.6e97b79e.js.map": "/Deploy-testing-using-gh-page/static/js/main.6e97b79e.js.map",
-    "453.add32add.chunk.js.map": "/Deploy-testing-using-gh-page/static/js/453.add32add.chunk.js.map"
+    "main.css": "/MAC_GUI_REACT/static/css/main.9b2ba36d.css",
+    "main.js": "/MAC_GUI_REACT/static/js/main.ee5e9aea.js",
+    "static/js/453.add32add.chunk.js": "/MAC_GUI_REACT/static/js/453.add32add.chunk.js",
+    "static/media/281553601___n.jpg": "/MAC_GUI_REACT/static/media/281553601_1200625580678473_5285464895107595026_n.bf76136b9272d7207faf.jpg",
+    "static/media/360_F_612316958_ueScrCOjrNBIuDMpiVt6UI3F8dkk6IWI.jpg": "/MAC_GUI_REACT/static/media/360_F_612316958_ueScrCOjrNBIuDMpiVt6UI3F8dkk6IWI.1a73e363721f3c45f055.jpg",
+    "index.html": "/MAC_GUI_REACT/index.html",
+    "main.9b2ba36d.css.map": "/MAC_GUI_REACT/static/css/main.9b2ba36d.css.map",
+    "main.ee5e9aea.js.map": "/MAC_GUI_REACT/static/js/main.ee5e9aea.js.map",
+    "453.add32add.chunk.js.map": "/MAC_GUI_REACT/static/js/453.add32add.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.67836eff.css",
-    "static/js/main.6e97b79e.js"
+    "static/css/main.9b2ba36d.css",
+    "static/js/main.ee5e9aea.js"
   ]
 }
